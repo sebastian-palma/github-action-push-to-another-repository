@@ -31,7 +31,7 @@ inputs:
     required: false
   create-destination-directory:
     description: '[Optional] creates the destination directory if it does not exist'
-    default: false
+    default: ''
     required: false
 runs:
   using: 'docker'

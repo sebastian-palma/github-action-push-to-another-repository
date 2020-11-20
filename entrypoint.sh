@@ -34,7 +34,7 @@ find "$CLONE_DIR" | grep -v "^$CLONE_DIR/\.git" | grep -v "^$CLONE_DIR$" | xargs
 ls -la "$CLONE_DIR"
 
 echo "Copying contents to git repo"
-if [ -z "$CREATE_DESTINATION_DIRECTORY" ]
+if [ -n "$CREATE_DESTINATION_DIRECTORY" ]
 then
   mkdir -p "${CLONE_DIR}/${DESTINATION_REPOSITORY_DIRECTORY}"
 fi
