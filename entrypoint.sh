@@ -29,7 +29,7 @@ git config --global user.name "$DESTINATION_GITHUB_USERNAME"
 git clone --single-branch --branch "$TARGET_BRANCH" "https://$API_TOKEN_GITHUB@github.com/$DESTINATION_REPOSITORY_USERNAME/$DESTINATION_REPOSITORY_NAME.git" "$CLONE_DIR"
 ls -la "$CLONE_DIR"
 
-if [ -n "$EMPTY_REPOSITORY" ]
+if [ -z "$EMPTY_REPOSITORY" ]
 then
   echo "Cleaning destination repository of old files"
   # Copy files into the git and deletes all git
