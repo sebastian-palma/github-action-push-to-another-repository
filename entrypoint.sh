@@ -28,10 +28,10 @@ git config --global user.name "$DESTINATION_GITHUB_USERNAME"
 git clone --single-branch --branch "$TARGET_BRANCH" "https://$API_TOKEN_GITHUB@github.com/$DESTINATION_REPOSITORY_USERNAME/$DESTINATION_REPOSITORY_NAME.git" "$CLONE_DIR"
 ls -la "$CLONE_DIR"
 
-echo "Cleaning destination repository of old files"
-# Copy files into the git and deletes all git
-find "$CLONE_DIR" | grep -v "^$CLONE_DIR/\.git" | grep -v "^$CLONE_DIR$" | xargs rm -rf # delete all files (to handle deletions)
-ls -la "$CLONE_DIR"
+## echo "Cleaning destination repository of old files"
+### Copy files into the git and deletes all git
+## find "$CLONE_DIR" | grep -v "^$CLONE_DIR/\.git" | grep -v "^$CLONE_DIR$" | xargs rm -rf # delete all files (to handle deletions)
+## ls -la "$CLONE_DIR"
 
 echo "Copying contents to git repo"
 if [ -n "$CREATE_DESTINATION_DIRECTORY" ]
