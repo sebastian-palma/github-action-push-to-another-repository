@@ -33,6 +33,10 @@ inputs:
     description: '[Optional] creates the destination directory if it does not exist'
     default: ''
     required: false
+  empty-repository:
+    description: '[Optional] controls whether to empty the cloned repository before copying the new files'
+    default: ''
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -46,6 +50,7 @@ runs:
     - ${{ inputs.commit-message }}
     - ${{ inputs.destination-repository-directory }}
     - ${{ inputs.create-destination-directory }}
+    - ${{ inputs.empty-repository }}
 branding:
   icon: 'git-commit'
   color: 'green'
